@@ -167,7 +167,7 @@ for epoch in range(1, args.epoch + 1):
                 features_source = torch.cat((feat_rgb, feat_depth), 1)
                 logits = netF(features_source)
 
-                # Classification los
+                # Classification loss
                 loss_rec = ce_loss(logits, img_label_source)
 
                 # Entropy loss
